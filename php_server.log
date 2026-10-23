@@ -1,0 +1,31 @@
+[Fri Oct 23 09:52:41 2026] PHP 8.3.6 Development Server (http://127.0.0.1:8080) started
+[Fri Oct 23 09:52:43 2026] 127.0.0.1:59508 Accepted
+[Fri Oct 23 09:52:43 2026] 127.0.0.1:59508 [200]: HEAD /mockup.html
+[Fri Oct 23 09:52:43 2026] 127.0.0.1:59508 Closing
+[Fri Oct 23 09:53:38 2026] 127.0.0.1:43424 Accepted
+[Fri Oct 23 09:53:38 2026] 127.0.0.1:43424 [200]: GET /mockup.html
+[Fri Oct 23 09:53:38 2026] 127.0.0.1:43424 Closing
+[Fri Oct 23 09:55:59 2026] 127.0.0.1:48328 Accepted
+[Fri Oct 23 09:55:59 2026] 127.0.0.1:48328 [302]: HEAD /index.php
+[Fri Oct 23 09:55:59 2026] 127.0.0.1:48328 Closing
+[Fri Oct 23 09:56:13 2026] 127.0.0.1:57344 Accepted
+[Fri Oct 23 09:56:13 2026] 127.0.0.1:57344 [200]: GET /login.php
+[Fri Oct 23 09:56:13 2026] 127.0.0.1:57344 Closing
+[Fri Oct 23 09:57:18 2026] 127.0.0.1:53430 Accepted
+[Fri Oct 23 09:57:18 2026] 127.0.0.1:53430 [200]: GET /login.php
+[Fri Oct 23 09:57:18 2026] 127.0.0.1:53430 Closing
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35896 Accepted
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35896 [302]: POST /login.php
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35896 Closing
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35908 Accepted
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35908 [200]: GET /index.php
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35908 Closing
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35914 Accepted
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35914 [200]: GET /index.php
+[Fri Oct 23 09:57:37 2026] 127.0.0.1:35914 Closing
+[Fri Oct 23 09:57:58 2026] 127.0.0.1:55660 Accepted
+[Fri Oct 23 09:57:58 2026] 127.0.0.1:55660 [200]: GET /dashboard_authenticated.html
+[Fri Oct 23 09:57:58 2026] 127.0.0.1:55660 Closing
+[Fri Oct 23 09:59:17 2026] 127.0.0.1:60626 Accepted
+[Fri Oct 23 09:59:17 2026] 127.0.0.1:60626 [200]: GET /login.php
+[Fri Oct 23 09:59:17 2026] 127.0.0.1:60626 Closing
