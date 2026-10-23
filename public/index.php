@@ -10,7 +10,7 @@ use App\ViewModels\WorktimeViewModel;
 Session::start();
 
 if (!Session::isAuthenticated()) {
-    header('Location: /login.php');
+    header('Location: login.php');
     exit;
 }
 
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } elseif ($action === 'logout') {
         Session::logout();
-        header('Location: /login.php');
+        header('Location: login.php');
         exit;
     }
 }
@@ -130,7 +130,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
                     <i class="fa-solid fa-key text-xs"></i> Passwort
                 </button>
 
-                <form method="POST" action="/index.php" class="inline">
+                <form method="POST" action="index.php" class="inline">
                     <input type="hidden" name="action" value="logout">
                     <button type="submit" class="bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/30 px-3 py-1.5 rounded-lg text-sm transition flex items-center gap-1.5">
                         <i class="fa-solid fa-right-from-bracket"></i> Abmelden
@@ -177,7 +177,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
 
                 <!-- Action Buttons -->
                 <div class="grid grid-cols-2 gap-4">
-                    <form method="POST" action="/index.php">
+                    <form method="POST" action="index.php">
                         <input type="hidden" name="action" value="clock_in">
                         <button type="submit" <?= $isClockedIn ? 'disabled' : '' ?>
                                 class="w-full flex flex-col items-center justify-center p-5 rounded-xl transition transform active:scale-95 <?= $isClockedIn ? 'bg-pink-900/20 border border-pink-900 text-pink-700 cursor-not-allowed opacity-50' : 'bg-gradient-to-tr from-pink-600 to-rose-500 hover:from-pink-500 hover:to-rose-400 text-white shadow-lg shadow-pink-500/30 border border-pink-400/30' ?>">
@@ -187,7 +187,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
                         </button>
                     </form>
 
-                    <form method="POST" action="/index.php">
+                    <form method="POST" action="index.php">
                         <input type="hidden" name="action" value="clock_out">
                         <button type="submit" <?= !$isClockedIn ? 'disabled' : '' ?>
                                 class="w-full flex flex-col items-center justify-center p-5 rounded-xl transition transform active:scale-95 <?= !$isClockedIn ? 'bg-pink-900/20 border border-pink-900 text-pink-700 cursor-not-allowed opacity-50' : 'bg-gradient-to-tr from-rose-700 to-pink-600 hover:from-rose-600 hover:to-pink-500 text-white shadow-lg shadow-rose-600/30 border border-rose-400/30' ?>">
@@ -207,7 +207,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
                     <h2 class="text-lg font-bold text-white flex items-center gap-2">
                         <i class="fa-solid fa-umbrella-beach text-pink-400"></i> Urlaubsplanung & Streak-Kalender
                     </h2>
-                    <p class="text-xs text-pink-300/80">Klicke auf einen Arbeitstag, um Urlaub einzutragen oder zu entfernen. 🔥 zeigt geleeistete Arbeitstage.</p>
+                    <p class="text-xs text-pink-300/80">Klicke auf einen Arbeitstag, um Urlaub einzutragen oder zu entfernen. 🔥 zeigt geleistete Arbeitstage.</p>
                 </div>
                 <div class="flex items-center gap-2">
                     <a href="?month=<?= $prevMonth ?>" class="p-2 bg-pink-900/50 hover:bg-pink-800 rounded-lg text-pink-200 text-sm"><i class="fa-solid fa-chevron-left"></i></a>
@@ -246,7 +246,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
                             <?= $day ?>
                         </div>
                     <?php else: ?>
-                        <form method="POST" action="/index.php?month=<?= $selectedMonth ?>">
+                        <form method="POST" action="index.php?month=<?= $selectedMonth ?>">
                             <input type="hidden" name="action" value="toggle_pto">
                             <input type="hidden" name="pto_date" value="<?= $dayStr ?>">
                             <button type="submit"
@@ -278,7 +278,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
                 </div>
 
                 <!-- Month Filter -->
-                <form method="GET" action="/index.php" class="flex items-center gap-3">
+                <form method="GET" action="index.php" class="flex items-center gap-3">
                     <label for="month-input" class="text-xs font-semibold text-pink-300/80">Monat auswählen:</label>
                     <input type="month" id="month-input" name="month" value="<?= htmlspecialchars($selectedMonth) ?>" onchange="this.form.submit()"
                            class="bg-pink-950 border border-pink-700 text-pink-100 rounded-lg px-3 py-1.5 text-sm focus:outline-none focus:border-pink-500">
@@ -322,7 +322,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
                 <div class="text-xs text-pink-300/80">
                     Gesamtstunden im <?= $monthNameGerman ?> <?= $year ?>: <span class="text-white font-bold text-sm"><?= $monthlyData['total_hours_formatted'] ?></span>
                 </div>
-                <a href="/export_csv.php?month=<?= htmlspecialchars($selectedMonth) ?>"
+                <a href="export_csv.php?month=<?= htmlspecialchars($selectedMonth) ?>"
                    class="bg-pink-600 hover:bg-pink-500 text-white font-semibold px-4 py-2 rounded-xl text-sm shadow-lg shadow-pink-600/30 border border-pink-400/30 flex items-center gap-2 transition active:scale-95">
                     <i class="fa-solid fa-file-csv text-base"></i> CSV herunterladen
                 </a>
@@ -338,7 +338,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
                 <h3 class="font-bold text-white text-lg">Passwort ändern</h3>
                 <button onclick="document.getElementById('pwd-modal').classList.add('hidden')" class="text-pink-300 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
-            <form method="POST" action="/index.php" class="space-y-4">
+            <form method="POST" action="index.php" class="space-y-4">
                 <input type="hidden" name="action" value="change_password">
                 <div>
                     <label class="block text-xs font-semibold text-pink-300 mb-1">Neues Passwort</label>

@@ -7,7 +7,7 @@ use App\Models\UserModel;
 Session::start();
 
 if (Session::isAuthenticated()) {
-    header('Location: /index.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     if (UserModel::verifyPassword('admin', $password)) {
         Session::login('admin');
-        header('Location: /index.php');
+        header('Location: index.php');
         exit;
     } else {
         $error = 'Ungültiges Passwort. Bitte versuchen Sie es erneut.';
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <form method="POST" action="/login.php" class="space-y-6">
+        <form method="POST" action="login.php" class="space-y-6">
             <div>
                 <label for="password" class="block text-xs font-semibold uppercase tracking-wider text-pink-300/80 mb-2">Passwort</label>
                 <div class="relative">
