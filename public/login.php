@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 <!DOCTYPE html>
-<html lang="de" class="h-full bg-slate-950 text-pink-100">
+<html lang="de" class="h-full bg-pink-950 text-pink-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="min-h-full flex items-center justify-center p-4 bg-slate-950 text-pink-100 font-sans">
+<body class="min-h-full flex items-center justify-center p-4 bg-gradient-to-br from-pink-950 via-rose-950 to-pink-900 text-pink-100 font-sans">
     <div class="w-full max-w-md bg-pink-950/70 border border-pink-800/70 rounded-2xl p-8 shadow-2xl backdrop-blur">
         <div class="text-center mb-8">
             <div class="inline-flex bg-gradient-to-tr from-pink-600 to-rose-500 p-4 rounded-2xl shadow-lg shadow-pink-500/30 mb-4">

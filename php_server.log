@@ -47,3 +47,21 @@
 [Fri Oct 23 10:15:52 2026] 127.0.0.1:60280 Accepted
 [Fri Oct 23 10:15:52 2026] 127.0.0.1:60280 [200]: GET /dashboard_pink_authenticated.html
 [Fri Oct 23 10:15:52 2026] 127.0.0.1:60280 Closing
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45432 Accepted
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45432 [302]: POST /login.php
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45432 Closing
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45442 Accepted
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45442 [200]: GET /index.php
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45442 Closing
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45452 Accepted
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45452 [200]: POST /index.php
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45452 Closing
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45454 Accepted
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45454 [200]: POST /index.php
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45454 Closing
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45466 Accepted
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45466 [200]: GET /index.php
+[Fri Oct 23 10:20:22 2026] 127.0.0.1:45466 Closing
+[Fri Oct 23 10:20:42 2026] 127.0.0.1:41264 Accepted
+[Fri Oct 23 10:20:42 2026] 127.0.0.1:41264 [200]: GET /full_pink_bg_dashboard.html
+[Fri Oct 23 10:20:42 2026] 127.0.0.1:41264 Closing

@@ -102,7 +102,7 @@ $nextMonth = (clone $dtMonth)->modify('+1 month')->format('Y-m');
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="min-h-full flex flex-col font-sans bg-slate-950 text-pink-50">
+<body class="min-h-full flex flex-col font-sans bg-gradient-to-br from-pink-950 via-rose-950 to-pink-900 text-pink-50">
 
     <!-- Header Navigation -->
     <header class="bg-pink-950/80 backdrop-blur border-b border-pink-800/50 sticky top-0 z-40 px-6 py-4">
